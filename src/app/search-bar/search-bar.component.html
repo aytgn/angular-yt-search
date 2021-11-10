@@ -1,0 +1,20 @@
+<form [formGroup]="searchForm">
+  <mdb-form-control>
+    <input
+      mdbInput
+      type="text"
+      id="searchBar"
+      class="form-control"
+      formControlName="searchValue"
+    />
+    <label mdbLabel for="searchBar" class="form-label">Search!</label>
+    <button mdbRipple type="button" class="btn btn-primary" (click)="onClick()">
+      Search!
+    </button>
+  </mdb-form-control>
+  <br />
+  <br />
+  <div class="container">
+    <h2>{{ title }}</h2>
+  </div>
+</form>
