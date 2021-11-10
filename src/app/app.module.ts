@@ -25,9 +25,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { YoutubeServiceInjectables } from './services/youtube-service-injectables';
 import { ReactiveFormsModule } from '@angular/forms';
+import { VideoCardComponent } from './video-card/video-card.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent],
+  declarations: [AppComponent, SearchBarComponent, VideoCardComponent],
   imports: [
     BrowserModule,
     MdbAccordionModule,

@@ -4,13 +4,20 @@
       mdbInput
       type="text"
       id="searchBar"
-      class="form-control"
+      class="form-control form-control-lg"
       formControlName="searchValue"
     />
     <label mdbLabel for="searchBar" class="form-label">Search!</label>
-    <button mdbRipple type="button" class="btn btn-primary" (click)="onClick()">
-      Search!
-    </button>
+    <div class="d-flex justify-content-center">
+      <button
+        mdbRipple
+        type="button"
+        class="btn btn-danger"
+        (click)="onClick()"
+      >
+        Search!
+      </button>
+    </div>
   </mdb-form-control>
   <br />
   <br />

@@ -1,7 +1,9 @@
-<div class="container d-flex justify-content-center flex-column pt-5">
+<div class="container-fluid d-flex justify-content-center flex-column pt-5">
   <div class="row justify-content-center text-center">
     <div class="col-9">
-      <h3 style="color: rgba(238, 42, 42, 0.815)">YouTube Search!</h3>
+      <h3 style="color: rgba(110, 51, 51, 0.945)">
+        <strong> YouTube Search! </strong>
+      </h3>
     </div>
   </div>
   <div class="row justify-content-center">
@@ -9,15 +11,10 @@
       <app-search-bar (videos)="getVideos($event)"></app-search-bar>
     </div>
   </div>
-  <div *ngIf="videos[0]" class="row justify-content-center">
+  <div class="row justify-content-center">
     <div class="col-4" *ngFor="let video of videos">
-      <h2>{{ video.title }}</h2>
-      <p>{{ video.description }}</p>
-      <img
-        [src]="video.thumbnailUrl"
-        class="img-thumbnail"
-        style="width: 400px; height: 300px"
-      />
+      <app-video-card [video]="video"></app-video-card>
+      <br />
     </div>
   </div>
 </div>

@@ -5,7 +5,7 @@ import { Result } from '../models/api-result.model';
 import { map } from 'rxjs/operators';
 
 export const API_URL = 'https://www.googleapis.com/youtube/v3';
-export const API_TOKEN = 'AIzaSyCGRORippuQ8kTer1yhLjJYsImrLfU0mcU';
+export const API_TOKEN = 'AIzaSyBramHg1Rg5abe-nCBQG0fU_IiQQCUjcHs';
 
 @Injectable()
 export class YouTubeApiService {
@@ -22,7 +22,7 @@ export class YouTubeApiService {
   search(valueToSearch: string): Observable<any> {
     return this.http
       .get(
-        `${this.apiUrl}/search?part=snippet&maxResults=10&q=${valueToSearch}&key=${API_TOKEN}`
+        `${this.apiUrl}/search?part=snippet&maxResults=9&q=${valueToSearch}&key=${API_TOKEN}`
       )
       .pipe(
         map((response: any) => {
@@ -32,7 +32,7 @@ export class YouTubeApiService {
               new Result(
                 item.snippet.title,
                 item.snippet.description,
-                item.snippet.thumbnails.default.url,
+                item.snippet.thumbnails.high.url,
                 `https://www.youtube.com/watch?v=${item.id.videoId}`
               )
             );
